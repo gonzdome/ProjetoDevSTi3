@@ -23,23 +23,22 @@
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
                 <TextBox x:Name="TxtBxPesquisa"
                      Grid.Column="0" 
-                     Margin="20,0,75,0"
-                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Center"
                      BorderBrush="LightGray" BorderThickness="1"
-                     Style="{StaticResource TxtBxPesquisa}"/>
+                     Style="{StaticResource TxtBxPesquisa}"
+                     Margin="20,0,0,0"/>
 
                 <Button x:Name="BtnPesquisar"
                     Grid.Column="0" 
                     Background="#23C481" Foreground="#ECECEC" 
                     Height="25" Width="75"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center">
+                    HorizontalAlignment="Right" VerticalAlignment="Center">
 
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
@@ -52,7 +51,8 @@
                     Grid.Column="2" 
                     Background="#23C481" Foreground="#ECECEC" 
                     Height="25" Width="75" 
-                    VerticalAlignment="Center">
+                    VerticalAlignment="Center"
+                    Margin="0,0,15,0">
 
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
@@ -62,7 +62,7 @@
                 </Button>
             </Grid>
 
-            <Grid Grid.Row="1" Margin="20,0,0,0">
+            <Grid Grid.Row="1" Margin="20,0,20,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="80"/>
                     <ColumnDefinition Width="200"/>
@@ -81,7 +81,8 @@
 
             <ItemsControl Grid.Row="2" 
                               BorderThickness="1" BorderBrush="LightGray"
-                              Margin="20,0,0,20">
+                              Margin="20,0,20,20">
+                
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
