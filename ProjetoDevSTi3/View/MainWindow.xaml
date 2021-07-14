@@ -34,7 +34,7 @@
                     <TextBox x:Name="TxtBxPesquisa"
                      Grid.Column="0" 
                      Margin="20" Width="554"
-                     BorderBrush="LightGray"
+                     BorderBrush="Gray"
                      HorizontalAlignment="Left"
                      BorderThickness="1"
                      Style="{StaticResource TxtBxPesquisa}"/>
@@ -67,8 +67,8 @@
                 </Grid>
 
                 <ItemsControl Grid.Row="1" 
-                              BorderThickness="1" BorderBrush="LightGray"
-                              Margin="20,0,0,0">
+                              BorderThickness="1" BorderBrush="Gray"
+                              Margin="20,0,0,20">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
