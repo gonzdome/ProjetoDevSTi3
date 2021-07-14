@@ -9,15 +9,15 @@
 
     <Grid Background="White" Margin="20">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="27.002"/>
                 <RowDefinition/>
-                <RowDefinition Height="27"/>
-                <RowDefinition Height="620"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
@@ -29,7 +29,7 @@
 
                 <TextBox x:Name="TxtBxPesquisa"
                      Grid.Column="0" 
-                     Margin="20,0,0,0" Width="554"
+                     Margin="20,0,75,0" Width="604"
                      BorderBrush="LightGray"
                      HorizontalAlignment="Left"
                      VerticalAlignment="Center"
@@ -66,11 +66,11 @@
 
             <Grid Grid.Row="1" Margin="20,0,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="200"/>
                     <ColumnDefinition/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="NUMERO" HorizontalContentAlignment="Center" FontWeight="Bold"/>
@@ -94,13 +94,6 @@
                                 <ColumnDefinition Width="90"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-
-                            <Label Content="11111"/>
-                            <Label Content="TESTE"/>
-                            <Label Content="TESTE"/>
-                            <Label Content="TESTE"/>
-                            <Label Content="TESTE"/>
-
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
