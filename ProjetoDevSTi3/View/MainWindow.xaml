@@ -5,86 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoDevSTi3.View"
         mc:Ignorable="d"
-        Title="MENU l PEDIDOS STi3" Height="768" Width="1024">
+        Title="MENU l PEDIDOS STi3" Height="768" Width="1024" Background="LightGray">
 
-    <Grid Background="LightGray">
+    <Grid Background="White" Margin="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Background="White" Margin="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="250"/>
-            </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="620"/>
+            </Grid.RowDefinitions>
 
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="640"/>
-                </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="10"/>
-                        <ColumnDefinition Width="75"/>
-                    </Grid.ColumnDefinitions>
-                    
-                    <TextBox x:Name="TxtBxPesquisa"
+                <TextBox x:Name="TxtBxPesquisa"
                      Grid.Column="0" 
-                     Margin="20" Width="554"
-                     BorderBrush="Gray"
+                     Margin="20,0,0,0" Width="554"
+                     BorderBrush="LightGray"
                      HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
                      BorderThickness="1"
                      Style="{StaticResource TxtBxPesquisa}"/>
 
-                    <Button x:Name="BtnPesquisar"
+                <Button x:Name="BtnPesquisar"
                     Grid.Column="0" 
                     Background="#23C481" Foreground="#ECECEC" 
                     Height="25" Width="75"
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
 
-                        <Button.Style>
-                            <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
-                                <Setter Property="Content" Value="Pesquisar"/>
-                            </Style>
-                        </Button.Style>
-                    </Button>
+                    <Button.Style>
+                        <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
+                            <Setter Property="Content" Value="Pesquisar"/>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
-                    <Button x:Name="BtnSincronizar"
-                    Grid.Column="3" 
+                <Button x:Name="BtnSincronizar"
+                    Grid.Column="2" 
                     Background="#23C481" Foreground="#ECECEC" 
                     Height="25" Width="75" 
-                    HorizontalAlignment="Right" Margin="0,0,0,0">
+                    VerticalAlignment="Center">
 
-                        <Button.Style>
-                            <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
-                                <Setter Property="Content" Value="Sincronizar"/>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-                </Grid>
-
-                <ItemsControl Grid.Row="1" 
-                              BorderThickness="1" BorderBrush="Gray"
-                              Margin="20,0,0,20">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="75"/>
-                                    <ColumnDefinition Width="125"/>
-                                    <ColumnDefinition Width="300"/>
-                                    <ColumnDefinition Width="75"/>
-                                    <ColumnDefinition Width="85"/>
-                                </Grid.ColumnDefinitions>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-
+                    <Button.Style>
+                        <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
+                            <Setter Property="Content" Value="Sincronizar"/>
+                        </Style>
+                    </Button.Style>
+                </Button>
             </Grid>
+
+            <Grid Grid.Row="1" Margin="20,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="NUMERO" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+                <Label Grid.Column="1" Content="DATA" FontWeight="Bold"/>
+                <Label Grid.Column="2" Content="CLIENTE" FontWeight="Bold"/>
+                <Label Grid.Column="3" Content="STATUS" FontWeight="Bold"/>
+                <Label Grid.Column="4" Content="VALOR TOTAL" FontWeight="Bold"/>
+            </Grid>
+
+
+            <ItemsControl Grid.Row="2" 
+                              BorderThickness="1" BorderBrush="LightGray"
+                              Margin="20,0,0,20">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Content="11111"/>
+                            <Label Content="TESTE"/>
+                            <Label Content="TESTE"/>
+                            <Label Content="TESTE"/>
+                            <Label Content="TESTE"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
         </Grid>
     </Grid>
 </Window>

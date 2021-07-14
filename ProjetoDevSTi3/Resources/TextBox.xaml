@@ -5,5 +5,6 @@
     <Style x:Key="TxtBxPesquisa" TargetType="TextBox">
         <Setter Property="Height" Value="25"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>
     </Style>
 </ResourceDictionary>
