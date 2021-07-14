@@ -29,11 +29,9 @@
 
                 <TextBox x:Name="TxtBxPesquisa"
                      Grid.Column="0" 
-                     Margin="20,0,75,0" Width="604"
-                     BorderBrush="LightGray"
-                     HorizontalAlignment="Left"
-                     VerticalAlignment="Center"
-                     BorderThickness="1"
+                     Margin="20,0,75,0"
+                     HorizontalAlignment="Stretch"
+                     BorderBrush="LightGray" BorderThickness="1"
                      Style="{StaticResource TxtBxPesquisa}"/>
 
                 <Button x:Name="BtnPesquisar"
