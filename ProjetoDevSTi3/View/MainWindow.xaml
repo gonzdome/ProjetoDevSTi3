@@ -36,9 +36,9 @@
 
                 <Button x:Name="BtnPesquisar"
                     Grid.Column="0" 
-                    Background="#23C481" Foreground="#ECECEC" 
+                    Background="#23C481" Foreground="White" 
                     Height="25" Width="75"
-                    HorizontalAlignment="Right" VerticalAlignment="Center">
+                    HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnPesquisar_Click">
 
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
@@ -49,10 +49,10 @@
 
                 <Button x:Name="BtnSincronizar"
                     Grid.Column="2" 
-                    Background="#23C481" Foreground="#ECECEC" 
+                    Background="#23C481" Foreground="White" 
                     Height="25" Width="75" 
                     VerticalAlignment="Center"
-                    Margin="0,0,15,0">
+                    Margin="0,0,15,0" Click="BtnSincronizar_Click">
 
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource DefaultBtn}">
@@ -71,9 +71,11 @@
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="4" BorderBrush="LightGray" BorderThickness="0,0,1,0">
+                <Label Grid.Column="4" BorderBrush="LightGray">
                     <Label.Effect>
-                        <DropShadowEffect ShadowDepth="3" BlurRadius="8" RenderingBias="Quality" Direction="333" Opacity="1"/>
+                        <DropShadowEffect ShadowDepth="3" BlurRadius="7" 
+                                      RenderingBias="Quality" Direction="315" 
+                                      Opacity="1" Color="LightGray"/>
                     </Label.Effect>
                 </Label>
 
@@ -85,21 +87,25 @@
 
             </Grid>
 
-
-
-            <ItemsControl Grid.Row="2" 
-                              BorderThickness="1,1,1,1" BorderBrush="LightGray"
-                              Margin="20,0,20,20">
+            <ItemsControl x:Name="ItemsControlClientes" Grid.Row="2"
+                          BorderBrush="LightGray" BorderThickness="1,1,1,1" 
+                          Margin="20,0,20,20" Background="White">
+                
+                <ItemsControl.Effect>
+                    <DropShadowEffect ShadowDepth="3" BlurRadius="7" 
+                                      RenderingBias="Quality" Direction="315" 
+                                      Opacity="1" Color="LightGray"/>
+                </ItemsControl.Effect>
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="300"/>
-                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="200"/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
                     </DataTemplate>

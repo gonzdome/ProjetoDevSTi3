@@ -21,5 +21,14 @@ namespace ProjetoDevSTi3.View
         {
             InitializeComponent();
         }
+        private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnSincronizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

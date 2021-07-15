@@ -2,8 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Name="LabelBorder" TargetType="Label">
-        <Setter Property="BorderThickness" Value="1,1,1,0"/>
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>
         <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="Background" Value="White"/>
     </Style>
     
 </ResourceDictionary>
