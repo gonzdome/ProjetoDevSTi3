@@ -10,7 +10,7 @@
     <Grid Background="White" Margin="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
@@ -32,7 +32,7 @@
                      VerticalAlignment="Center"
                      BorderBrush="LightGray" BorderThickness="1"
                      Style="{StaticResource TxtBxPesquisa}"
-                     Margin="20,0,0,0"/>
+                     Margin="20,0,75,0"/>
 
                 <Button x:Name="BtnPesquisar"
                     Grid.Column="0" 
@@ -90,7 +90,7 @@
             <ItemsControl x:Name="ItemsControlClientes" Grid.Row="2"
                           BorderBrush="LightGray" BorderThickness="1,1,1,1" 
                           Margin="20,0,20,20" Background="White">
-                
+
                 <ItemsControl.Effect>
                     <DropShadowEffect ShadowDepth="3" BlurRadius="7" 
                                       RenderingBias="Quality" Direction="315" 
