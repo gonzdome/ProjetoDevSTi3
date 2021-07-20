@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace ProjetoDevSTi3.View
 {
@@ -23,7 +13,7 @@ namespace ProjetoDevSTi3.View
         }
         private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void BtnSincronizar_Click(object sender, RoutedEventArgs e)
