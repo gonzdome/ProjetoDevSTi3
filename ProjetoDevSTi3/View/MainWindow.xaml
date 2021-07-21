@@ -114,13 +114,34 @@
             </ItemsControl>
         </Grid>
 
-        <UserControls:UcOrderDetails Grid.Column="1" Margin="20,51,20,20">
-            <UserControls:UcOrderDetails.Effect>
-                <DropShadowEffect     ShadowDepth="3" BlurRadius="7" 
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="52"/>
+                <RowDefinition Height="659*"/>
+            </Grid.RowDefinitions>
+
+            <ContentControl Grid.Row="1"
+                        x:Name="Conteudo" Margin="25,0,20,20" Grid.RowSpan="2">
+                <ContentControl.Effect>
+                    <DropShadowEffect ShadowDepth="3" BlurRadius="7" 
                                       RenderingBias="Quality" Direction="315" 
                                       Opacity="1" Color="LightGray"/>
-            </UserControls:UcOrderDetails.Effect>
-        </UserControls:UcOrderDetails>
+                </ContentControl.Effect>
+            </ContentControl>
 
+            <Button x:Name="BtnFechar"
+                Style="{StaticResource DefaultBtn}"
+                Width="6" Height="20" 
+                BorderThickness="0" 
+                Foreground="White"
+                HorizontalAlignment="Right" VerticalAlignment="Top"
+                Content="x" Click="BtnFechar_Click" Grid.Row="1" Margin="0,0,25,0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock Text="{TemplateBinding Content}" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
     </Grid>
 </Window>
