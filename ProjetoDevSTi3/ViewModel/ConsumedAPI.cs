@@ -19,7 +19,6 @@ namespace ProjetoDevSTi3.ViewModel
         public decimal SubTotal { get; set; }
         public decimal Total { get; set; }
 
-
         public string Nome { get; set; }
         public int Documento { get; set; }
         public DateTime DataNascimento { get; set; }
