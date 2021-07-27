@@ -28,7 +28,7 @@
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox x:Name="TxtBxPesquisa"
+                <TextBox x:Name="TxtBxPesquisa" Text="{Binding Pedido}"
                      Grid.Column="0" 
                      VerticalAlignment="Center"
                      BorderBrush="LightGray" BorderThickness="1"
@@ -91,7 +91,8 @@
 
             <ItemsControl x:Name="ItemsControlClientes" Grid.Row="2"
                           BorderBrush="LightGray" BorderThickness="1,1,1,1" 
-                          Margin="20,0,20,20" Background="White">
+                          Margin="20,0,20,20" Background="White"
+                          ItemsSource="{Binding ItemsAdicionados}">
 
                 <ItemsControl.Effect>
                     <DropShadowEffect ShadowDepth="3" BlurRadius="7" 

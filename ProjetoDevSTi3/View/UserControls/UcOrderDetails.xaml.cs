@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using ProjetoDevSTi3.ViewModel;
+using System.Collections.ObjectModel;
+using System.Windows.Controls;
 
 namespace ProjetoDevSTi3.View.UserControls
 {
