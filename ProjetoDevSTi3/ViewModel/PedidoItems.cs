@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ProjetoDevSTi3.ViewModel
+﻿namespace ProjetoDevSTi3.ViewModel
 {
     public class PedidoItems
     {
