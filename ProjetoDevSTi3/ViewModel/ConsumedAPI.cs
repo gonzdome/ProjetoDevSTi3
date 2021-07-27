@@ -24,8 +24,14 @@ namespace ProjetoDevSTi3.ViewModel
         public int Documento { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
+        public string Cnpj { get; set; }
+        public string Cpf { get; set; }
+        public string RazaoSozial { get; set; }
 
-
+        public string IdProduto { get; set; }
+        public int Quantidade { get; set; }
+        public int Parcela { get; set; }
+        public string Codigo { get; set; }
         public string Endereco { get; set; }
         public int NumeroRua { get; set; }
         public string Cep { get; set; }

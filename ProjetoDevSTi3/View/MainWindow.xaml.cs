@@ -57,12 +57,12 @@ namespace ProjetoDevSTi3.View
                 BaseAddress = new System.Uri("https://desafiotecnicosti3.azurewebsites.net/")
             };
 
-            var response = client.GetAsync($"/pedido{pedido}").Result;
+            var response = client.GetAsync($"/pedido").Result;
 
             if (response.IsSuccessStatusCode)
             {
                 var enderecoCompleto = response.Content.ReadAsStringAsync().Result;
-                var obj = JsonConvert.DeserializeObject<ConsumedAPIPedido>(enderecoCompleto);
+                var obj = JsonConvert.DeserializeObject<List<ConsumedAPIPedido>>(enderecoCompleto);
             }
             else
             {
@@ -80,25 +80,28 @@ namespace ProjetoDevSTi3.View
             public string Desconto { get; set; }
             public string Frete { get; set; }
             public string SubTotal { get; set; }
-            public string Total { get; set; }
-
+            public string ValorTotal { get; set; }
 
             public string Nome { get; set; }
-            public string Documento { get; set; }
             public string DataNascimento { get; set; }
             public string Email { get; set; }
             public string Cnpj { get; set; }
             public string Cpf { get; set; }
+            public string RazaoSozial { get; set; }
 
 
-            public string Endereco { get; set; }
-            public string NumeroRua { get; set; }
-            public string Cep { get; set; }
-            public string Bairro { get; set; }
-            public string Cidade { get; set; }
-            public string Estado { get; set; }
-            public string Complemento { get; set; }
-            public string Referencia { get; set; }
+            //public string IdProduto { get; set; }
+            //public string Quantidade { get; set; }
+            //public string Parcela { get; set; }
+            //public string Codigo { get; set; }
+            //public string Endereco { get; set; }
+            //public string NumeroRua { get; set; }
+            //public string Cep { get; set; }
+            //public string Bairro { get; set; }
+            //public string Cidade { get; set; }
+            //public string Estado { get; set; }
+            //public string Complemento { get; set; }
+            //public string Referencia { get; set; }
         }
     }
 }
