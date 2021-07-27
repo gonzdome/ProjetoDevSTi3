@@ -39,42 +39,42 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,165">
                 <Label Content="Numero:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtNumero" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,120">
                 <Label Content="Data de Criação:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtDataCriacao" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,80">
-                <Label Content="Data de Alteração:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <Label Content="Data de Alteracao:" Height="25" BorderThickness="0"/>
+                <TextBlock x:Name="TxtDataAlteracao" Text="" Height="15"/>
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
                 <Label Content="Status:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtStatus" Text="" Height="15"/>
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                 <Label Content="Desconto:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtDesconto" Text="" Height="15"/>
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
                 <Label Content="Frete:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtFrete" Text="" Height="15"/>
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0,80,0,0">
                 <Label Content="SubTotal:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtSubtotal" Text="" Height="15"/>
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0,120,0,0">
                 <Label Content="Total:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtTotal" Text="" Height="15"/>
             </StackPanel>
 
         </Grid>
@@ -82,64 +82,64 @@
         <Grid Grid.Row="4">
             <StackPanel Orientation="Horizontal" Margin="0,0,0,75">
                 <Label Content="Cliente:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtCliente" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,35">
                 <Label Content="Documento:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtDocumento" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                 <Label Content="Data de Nascimento:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtDataNasc" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,45,0,0">
                 <Label Content="E-mail:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtEmail" Text="" Height="15"/>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="8">
             <StackPanel Orientation="Horizontal" Margin="0,0,0,260">
                 <Label Content="Endereco:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtEndereco" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,215">
                 <Label Content="Numero:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtNumeroCasa" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,180">
                 <Label Content="Cep:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtCep" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,140">
                 <Label Content="Bairro:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtBairro" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,100">
                 <Label Content="Cidade:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtCidade" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,60">
                 <Label Content="Estado:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtEstado" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
                 <Label Content="Complemento:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtComplemento" Text="" Height="15"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                 <Label Content="Referencia:" Height="25" BorderThickness="0"/>
-                <TextBlock Text="" Height="15"/>
+                <TextBlock x:Name="TxtReferencia" Text="" Height="15"/>
             </StackPanel>
         </Grid>
     </Grid>
