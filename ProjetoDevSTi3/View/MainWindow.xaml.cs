@@ -61,7 +61,11 @@ namespace ProjetoDevSTi3.View
             if (response.IsSuccessStatusCode)
             {
                 var enderecoCompleto = response.Content.ReadAsStringAsync().Result;
-                var obj = JsonConvert.DeserializeObject<PedidoViewModel>(enderecoCompleto);
+                var obj = JsonConvert.DeserializeObject<ConsumedAPI>(enderecoCompleto);
+            }
+            else
+            {
+                MessageBox.Show("Erro encontrado, API funcionando incorretamente", "Atenção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
