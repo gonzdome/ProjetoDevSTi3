@@ -45,10 +45,10 @@ namespace ProjetoDevSTi3.View
 
         private void TxtBxPesquisa_LostFocus(object sender, RoutedEventArgs e)
         {
-            ItensPedido((sender as TextBox).Text);
+            ItemsPedido((sender as TextBox).Text);
         }
 
-        private void ItensPedido(string pedido)
+        private void ItemsPedido(string pedido)
         {
             //https://desafiotecnicosti3.azurewebsites.net/pedido
             var client = new HttpClient

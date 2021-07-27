@@ -1,4 +1,4 @@
-﻿    namespace ProjetoDevSTi3.ViewModel
+﻿namespace ProjetoDevSTi3.ViewModel
 {
     public class Cliente
     {

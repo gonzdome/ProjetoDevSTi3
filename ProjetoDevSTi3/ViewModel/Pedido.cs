@@ -1,4 +1,6 @@
-﻿namespace ProjetoDevSTi3.ViewModel
+﻿using System.Collections.Generic;
+
+namespace ProjetoDevSTi3.ViewModel
 {
     public class Pedido
     {
@@ -14,7 +16,7 @@
 
         public Cliente Cliente { get; set; }
         public EnderecoEntrega EnderecoEntrega { get; set; }
-        public Itens Itens { get; set; }
-        public Pagamento Pagamento { get; set; }
+        public List<Itens> Itens { get; set; }
+        public List<Pagamento> Pagamento { get; set; }
     }
 }
