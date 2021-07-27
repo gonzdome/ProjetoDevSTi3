@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDevSTi3.ViewModel
 {
-    public class PedidoItems
+    public class Itens
     {
         public string Id { get; set; }
         public string IdProduto { get; set; }

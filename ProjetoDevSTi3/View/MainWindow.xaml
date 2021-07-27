@@ -111,11 +111,11 @@
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="{Binding Nome}"/>
-                            <TextBlock Grid.Column="1" Text="{Binding Data}"/>
-                            <TextBlock Grid.Column="2" Text="{Binding Cliente}"/>
-                            <TextBlock Grid.Column="3" Text="{Binding Status}"/>
-                            <TextBlock Grid.Column="4" Text="{Binding ValorTotalItem, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
+                            <TextBlock x:Name="TxtbNumero" Text="{Binding Numero}"/>
+                            <TextBlock x:Name="TxtbData" Grid.Column="1" Text="{Binding Data}"/>
+                            <TextBlock x:Name="TxtbNome" Grid.Column="2" Text="{Binding Nome}"/>
+                            <TextBlock x:Name="TxtbStatus" Grid.Column="3" Text="{Binding Status}"/>
+                            <TextBlock x:Name="TxtbValorTotalItem" Grid.Column="4" Text="{Binding ValorTotalItem, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
 
                             <Border Grid.ColumnSpan="3" BorderThickness="0,0,0,1" BorderBrush="LightGray"/>
 

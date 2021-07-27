@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDevSTi3.ViewModel
 {
-    public class PedidoEnderecoEntrega
+    public class EnderecoEntrega
     {
         public string Id { get; set; }
         public string Endereco { get; set; }
