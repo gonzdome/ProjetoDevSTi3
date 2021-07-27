@@ -1,5 +1,8 @@
-﻿using ProjetoDevSTi3.View.UserControls;
+﻿using Newtonsoft.Json;
+using ProjetoDevSTi3.View.UserControls;
+using ProjetoDevSTi3.ViewModel;
 using System;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -38,6 +41,28 @@ namespace ProjetoDevSTi3.View
         private void BtnSincronizar_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void TxtBxPesquisa_LostFocus(object sender, RoutedEventArgs e)
+        {
+            ItemsPedido((sender as TextBox).Text);
+        }
+
+        private void ItemsPedido(string pedido)
+        {
+            //https://desafiotecnicosti3.azurewebsites.net/pedido
+            var client = new HttpClient
+            {
+                BaseAddress = new System.Uri("https://desafiotecnicosti3.azurewebsites.net/")
+            };
+
+            var response = client.GetAsync($"/pedido{pedido}").Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                var enderecoCompleto = response.Content.ReadAsStringAsync().Result;
+                var obj = JsonConvert.DeserializeObject<PedidoViewModel>(enderecoCompleto);
+            }
         }
     }
 }

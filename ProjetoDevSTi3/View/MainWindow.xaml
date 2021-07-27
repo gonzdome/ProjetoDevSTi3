@@ -33,7 +33,8 @@
                      VerticalAlignment="Center"
                      BorderBrush="LightGray" BorderThickness="1"
                      Style="{StaticResource TxtBxPesquisa}"
-                     Margin="20,0,75,0"/>
+                     Margin="20,0,75,0"
+                         LostFocus="TxtBxPesquisa_LostFocus"/>
 
                 <Button x:Name="BtnPesquisar"
                     Grid.Column="0" 
