@@ -89,10 +89,10 @@
 
             </Grid>
 
-            <ItemsControl x:Name="ItemsControlClientes" Grid.Row="2"
+            <ItemsControl x:Name="ItemsControlPedido" Grid.Row="2"
                           BorderBrush="LightGray" BorderThickness="1,1,1,1" 
                           Margin="20,0,20,20" Background="White"
-                          ItemsSource="{Binding ItemsAdicionados}">
+                          ItemsSource="{Binding ItensAdicionados}">
 
                 <ItemsControl.Effect>
                     <DropShadowEffect ShadowDepth="3" BlurRadius="7" 
