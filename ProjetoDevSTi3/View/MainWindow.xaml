@@ -92,7 +92,7 @@
             <ItemsControl x:Name="ItemsControlPedido" Grid.Row="2"
                           BorderBrush="LightGray" BorderThickness="1,1,1,1" 
                           Margin="20,0,20,20" Background="White"
-                          ItemsSource="{Binding ItensAdicionados}">
+                          ItemsSource="{Binding ItemsPedidoList}">
 
                 <ItemsControl.Effect>
                     <DropShadowEffect ShadowDepth="3" BlurRadius="7" 
@@ -111,13 +111,15 @@
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="TxtbNumero" Text="{Binding Numero}"/>
-                            <TextBlock x:Name="TxtbData" Grid.Column="1" Text="{Binding Data}"/>
-                            <TextBlock x:Name="TxtbNome" Grid.Column="2" Text="{Binding Nome}"/>
-                            <TextBlock x:Name="TxtbStatus" Grid.Column="3" Text="{Binding Status}"/>
-                            <TextBlock x:Name="TxtbValorTotalItem" Grid.Column="4" Text="{Binding ValorTotalItem, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
+                            <TextBlock x:Name="TxtbNumero" Text="{Binding Item1}" Width="80" Margin="5,0,0,0"/>
+                            <TextBlock x:Name="TxtbDataCriacao" Grid.Column="1" Text="{Binding Item2}" Width="200" Margin="5,0,0,0"/>
+                            <TextBlock x:Name="TxtbNome" Grid.Column="2" Text="{Binding Item3}"/>
+                            <TextBlock x:Name="TxtbStatus" Grid.Column="3" Text="{Binding Item4}" Width="90"/>
+                            <TextBlock x:Name="TxtbValorTotalItem" Grid.Column="4" 
+                                       Text="{Binding Item5, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"
+                                       Width="100"/>
 
-                            <Border Grid.ColumnSpan="3" BorderThickness="0,0,0,1" BorderBrush="LightGray"/>
+                            <Border Grid.ColumnSpan="5" BorderThickness="0,0,0,1" BorderBrush="LightGray"/>
 
                         </Grid>
                     </DataTemplate>

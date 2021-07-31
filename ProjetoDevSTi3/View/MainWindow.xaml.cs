@@ -3,22 +3,25 @@ using ProjetoDevSTi3.View.UserControls;
 using ProjetoDevSTi3.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace ProjetoDevSTi3.View
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        public UcOrderDetails UcOrderDetailsVm = new UcOrderDetails();
+
         public MainWindow()
         {
             InitializeComponent();
+
             BtnFechar.IsEnabled = false;
         }
+
         private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
         {
             InicializarUc(sender);
@@ -39,15 +42,15 @@ namespace ProjetoDevSTi3.View
             BtnFechar.IsEnabled = false;
         }
 
-        private void BtnSincronizar_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void TxtBxPesquisa_LostFocus(object sender, RoutedEventArgs e)
         {
             ItemsPedido((sender as TextBox).Text);
         }
+        private void BtnSincronizar_Click(object sender, RoutedEventArgs e)
+        {
+        }
 
+        public ObservableCollection<Tuple<long, DateTime, string, string, decimal>> ItemsPedidoList { get; set; } = new ObservableCollection<Tuple<long, DateTime, string, string, decimal>>();
         private void ItemsPedido(string pedido)
         {
             //https://desafiotecnicosti3.azurewebsites.net/pedido
@@ -62,6 +65,21 @@ namespace ProjetoDevSTi3.View
             {
                 var enderecoCompleto = response.Content.ReadAsStringAsync().Result;
                 var obj = JsonConvert.DeserializeObject<List<Pedido>>(enderecoCompleto);
+
+                foreach (var item in obj)
+                {
+                    var pedidoNum = Convert.ToInt64(item.Numero);
+                    var pedidoData = Convert.ToDateTime(item.DataCriacao);
+                    var pedidoNome = Convert.ToString(item.Cliente.Nome);
+                    var pedidoStatus = Convert.ToString(item.Status);
+                    var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
+
+                    ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
+                        pedidoData,
+                        pedidoNome,
+                        pedidoStatus,
+                        pedidoValorTotal));
+                }
             }
         }
     }
