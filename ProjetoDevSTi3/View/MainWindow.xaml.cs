@@ -94,7 +94,7 @@ namespace ProjetoDevSTi3.View
                             pedidoStatus,
                             pedidoValorTotal
                             ));
-                    };
+                    }
                     if(item.ValorTotal.Length == 3 || item.ValorTotal.Length == 4)
                     {
                         var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
@@ -105,7 +105,6 @@ namespace ProjetoDevSTi3.View
                             pedidoValorTotal
                             ));
                     }
-                
                 }
             }
         }

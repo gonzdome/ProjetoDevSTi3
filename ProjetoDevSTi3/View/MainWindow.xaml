@@ -117,7 +117,7 @@
                             <TextBlock x:Name="TxtbNumero" Text="{Binding Item1, StringFormat={}{0:D5}}" 
                                        Width="80" Margin="5,0,0,0" Height="20"/>
                             <TextBlock x:Name="TxtbDataCriacao" Grid.Column="1"
-                                       Text="{Binding Item2, ConverterCulture=pt-BR, StringFormat={}{0:dddd. dd MMM yyyy}}" 
+                                       Text="{Binding Item2, ConverterCulture=pt-BR, StringFormat={}{0:dddd'.' dd 'de' MMMM yyyy}}" 
                                        Width="200" Margin="5,0,0,0" Height="20"/>
                             <TextBlock x:Name="TxtbNome" Grid.Column="2" Text="{Binding Item3}"
                                        Margin="5,0,0,0" Height="20"/>
