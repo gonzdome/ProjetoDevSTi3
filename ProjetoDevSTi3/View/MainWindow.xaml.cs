@@ -82,7 +82,6 @@ namespace ProjetoDevSTi3.View
                     var pedidoData = Convert.ToDateTime(item.DataCriacao);
                     var pedidoNome = Convert.ToString(item.Cliente.Nome);
                     var pedidoStatus = Convert.ToString(item.Status);
-                    //var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
 
                     if(item.ValorTotal.Length == 5)
                     {
