@@ -44,7 +44,13 @@ namespace ProjetoDevSTi3.View
 
         private void TxtBxPesquisa_LostFocus(object sender, RoutedEventArgs e)
         {
+            LimparLista();
             ItemsPedido((sender as TextBox).Text);
+        }
+
+        private void LimparLista()
+        {
+            ItemsControlPedido.Items.Clear();
         }
         private void BtnSincronizar_Click(object sender, RoutedEventArgs e)
         {
