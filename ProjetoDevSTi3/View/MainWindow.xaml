@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoDevSTi3.View"
         xmlns:UserControls="clr-namespace:ProjetoDevSTi3.View.UserControls" x:Class="ProjetoDevSTi3.View.MainWindow"
+        xmlns:DecimalConverter="DecimalConverter"
         mc:Ignorable="d"
         Title="MENU l PEDIDOS STi3" Height="768" Width="1024" Background="LightGray" WindowStartupLocation="CenterScreen">
+
 
     <Grid Background="White" Margin="20">
         <Grid.ColumnDefinitions>
@@ -111,13 +113,18 @@
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="TxtbNumero" Text="{Binding Item1}" Width="80" Margin="5,0,0,0"/>
-                            <TextBlock x:Name="TxtbDataCriacao" Grid.Column="1" Text="{Binding Item2}" Width="200" Margin="5,0,0,0"/>
-                            <TextBlock x:Name="TxtbNome" Grid.Column="2" Text="{Binding Item3}"/>
-                            <TextBlock x:Name="TxtbStatus" Grid.Column="3" Text="{Binding Item4}" Width="90"/>
+                            <TextBlock x:Name="TxtbNumero" Text="{Binding Item1, StringFormat={}{0:D5}}" 
+                                       Width="80" Margin="5,0,0,0" Height="20"/>
+                            <TextBlock x:Name="TxtbDataCriacao" Grid.Column="1"
+                                       Text="{Binding Item2, ConverterCulture=pt-BR, StringFormat={}{0:dddd. dd MMM yyyy}}" 
+                                       Width="200" Margin="5,0,0,0" Height="20"/>
+                            <TextBlock x:Name="TxtbNome" Grid.Column="2" Text="{Binding Item3}"
+                                       Margin="5,0,0,0" Height="20"/>
+                            <TextBlock x:Name="TxtbStatus" Grid.Column="3" Text="{Binding Item4}" 
+                                       Margin="5,0,0,0" Width="90" Height="20"/>
                             <TextBlock x:Name="TxtbValorTotalItem" Grid.Column="4" 
-                                       Text="{Binding Item5, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"
-                                       Width="100"/>
+                                       Text="{Binding Item5}"
+                                       Margin="5,0,0,0" Width="100" Height="20"/>
 
                             <Border Grid.ColumnSpan="5" BorderThickness="0,0,0,1" BorderBrush="LightGray"/>
 

@@ -7,7 +7,8 @@ using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace ProjetoDevSTi3.View
 {
@@ -56,7 +57,9 @@ namespace ProjetoDevSTi3.View
         {
         }
 
-        public ObservableCollection<Tuple<long, DateTime, string, string, decimal>> ItemsPedidoList { get; set; } = new ObservableCollection<Tuple<long, DateTime, string, string, decimal>>();
+        public ObservableCollection<Tuple<long, DateTime, string, string, string>> ItemsPedidoList { get; set; } = 
+            new ObservableCollection<Tuple<long, DateTime, string, string, string>>();
+
         private void ItemsPedido(string pedido)
         {
             //https://desafiotecnicosti3.azurewebsites.net/pedido
@@ -72,6 +75,7 @@ namespace ProjetoDevSTi3.View
                 var enderecoCompleto = response.Content.ReadAsStringAsync().Result;
                 var obj = JsonConvert.DeserializeObject<List<Pedido>>(enderecoCompleto);
 
+
                 foreach (var item in obj)
                 {
                     var pedidoNum = Convert.ToInt64(item.Numero);
@@ -81,10 +85,11 @@ namespace ProjetoDevSTi3.View
                     var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
 
                     ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
-                        pedidoData,
-                        pedidoNome,
-                        pedidoStatus,
-                        pedidoValorTotal));
+                            pedidoData,
+                            pedidoNome,
+                            pedidoStatus,
+                            item.ValorTotal
+                            ));
                 }
             }
         }
