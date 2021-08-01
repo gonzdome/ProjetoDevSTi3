@@ -82,14 +82,30 @@ namespace ProjetoDevSTi3.View
                     var pedidoData = Convert.ToDateTime(item.DataCriacao);
                     var pedidoNome = Convert.ToString(item.Cliente.Nome);
                     var pedidoStatus = Convert.ToString(item.Status);
-                    var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
+                    //var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
 
-                    ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
+                    if(item.ValorTotal.Length == 5)
+                    {
+                        var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal)/10;
+
+                        ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
                             pedidoData,
                             pedidoNome,
                             pedidoStatus,
-                            item.ValorTotal
+                            pedidoValorTotal
                             ));
+                    };
+                    if(item.ValorTotal.Length == 3 || item.ValorTotal.Length == 4)
+                    {
+                        var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
+                        ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
+                            pedidoData,
+                            pedidoNome,
+                            pedidoStatus,
+                            pedidoValorTotal
+                            ));
+                    }
+                
                 }
             }
         }

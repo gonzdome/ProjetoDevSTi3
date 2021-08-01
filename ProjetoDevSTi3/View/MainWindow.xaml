@@ -42,7 +42,8 @@
                     Grid.Column="0" 
                     Background="#23C481" Foreground="White" 
                     Height="25" Width="75"
-                    HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnPesquisar_Click">
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Click="BtnPesquisar_Click">
 
                     <Button.Style>
                         <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DefaultBtn}">
@@ -123,7 +124,7 @@
                             <TextBlock x:Name="TxtbStatus" Grid.Column="3" Text="{Binding Item4}" 
                                        Margin="5,0,0,0" Width="90" Height="20"/>
                             <TextBlock x:Name="TxtbValorTotalItem" Grid.Column="4" 
-                                       Text="{Binding Item5}"
+                                       Text="{Binding Item5, ConverterCulture=pt-BR, StringFormat='c'}"
                                        Margin="5,0,0,0" Width="100" Height="20"/>
 
                             <Border Grid.ColumnSpan="5" BorderThickness="0,0,0,1" BorderBrush="LightGray"/>
