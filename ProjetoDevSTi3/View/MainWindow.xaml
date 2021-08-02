@@ -114,8 +114,12 @@
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="TxtbNumero" Text="{Binding Item1, StringFormat={}{0:D5}}" 
-                                       Width="80" Margin="5,0,0,0" Height="20"/>
+                            <Button x:Name="ButtonNumero" BorderBrush="LightGray" BorderThickness="0,0,0,1"
+                                       Background="White" Content="{Binding Item1, StringFormat={}{0:D5}}" 
+                                       ContentStringFormat="{}{0:D5}"
+                                       HorizontalContentAlignment="Center"
+                                       Width="80" Height="20"
+                                       Click="ButtonNumero_Click"/>
                             <TextBlock x:Name="TxtbDataCriacao" Grid.Column="1"
                                        Text="{Binding Item2, ConverterCulture=pt-BR, StringFormat={}{0:dddd'.' dd 'de' MMMM yyyy}}" 
                                        Width="200" Margin="5,0,0,0" Height="20"/>

@@ -25,7 +25,6 @@ namespace ProjetoDevSTi3.View
 
         private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-            InicializarUc(sender);
         }
 
         private void InicializarUc(object sender)
@@ -36,19 +35,24 @@ namespace ProjetoDevSTi3.View
                 BtnFechar.IsEnabled = true;
             }
         }
-
+        private void FinalizarUc(object sender)
+        {
+            if (sender is Button)
+            {
+                Conteudo.Content = "";
+                BtnFechar.IsEnabled = false;
+            }
+        }
         private void BtnFechar_Click(object sender, EventArgs e)
         {
             Conteudo.Content = "";
             BtnFechar.IsEnabled = false;
         }
-
         private void TxtBxPesquisa_LostFocus(object sender, RoutedEventArgs e)
         {
             LimparLista();
             ItemsPedido((sender as TextBox).Text);
         }
-
         private void LimparLista()
         {
             ItemsControlPedido.Items.Clear();
@@ -78,17 +82,36 @@ namespace ProjetoDevSTi3.View
 
                 foreach (var item in obj)
                 {
+                    var pedidoId = Convert.ToString(item.Id);
                     var pedidoNum = Convert.ToInt64(item.Numero);
-                    var pedidoData = Convert.ToDateTime(item.DataCriacao);
+                    var pedidoDataCriacao = Convert.ToDateTime(item.DataCriacao);
+                    var pedidoDataAlteracao = Convert.ToDateTime(item.DataAlteracao);
+                    var pedidoDesc = Convert.ToDecimal(item.Desconto);
+                    var pedidoFrete = Convert.ToDecimal(item.Frete);
+                    var pedidoSubTotal = Convert.ToDecimal(item.SubTotal);
                     var pedidoNome = Convert.ToString(item.Cliente.Nome);
                     var pedidoStatus = Convert.ToString(item.Status);
 
-                    if(item.ValorTotal.Length == 5)
+                    var pedidoDoc1 = Convert.ToString(item.Cliente.Cnpj);
+                    var pedidoDoc2 = Convert.ToString(item.Cliente.Cpf);
+                    var pedidoDataNasc = Convert.ToDateTime(item.Cliente.DataNascimento);
+                    var pedidoEmail = Convert.ToString(item.Cliente.Email);
+
+                    var pedidoEndereco = Convert.ToString(item.EnderecoEntrega.Endereco);
+                    var pedidoNumEntrega = Convert.ToString(item.EnderecoEntrega.Numero);
+                    var pedidoCep = Convert.ToString(item.EnderecoEntrega.Cep);
+                    var pedidoBairro = Convert.ToString(item.EnderecoEntrega.Bairro);
+                    var pedidoCidade = Convert.ToString(item.EnderecoEntrega.Cidade);
+                    var pedidoEstado = Convert.ToString(item.EnderecoEntrega.Estado);
+                    var pedidoComplemento = Convert.ToString(item.EnderecoEntrega.Complemento);
+                    var pedidoReferencia = Convert.ToString(item.EnderecoEntrega.Referencia);
+
+                    if (item.ValorTotal.Length == 5)
                     {
                         var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal)/10;
 
                         ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
-                            pedidoData,
+                            pedidoDataCriacao,
                             pedidoNome,
                             pedidoStatus,
                             pedidoValorTotal
@@ -98,7 +121,7 @@ namespace ProjetoDevSTi3.View
                     {
                         var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
                         ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
-                            pedidoData,
+                            pedidoDataCriacao,
                             pedidoNome,
                             pedidoStatus,
                             pedidoValorTotal
@@ -106,6 +129,11 @@ namespace ProjetoDevSTi3.View
                     }
                 }
             }
+        }
+        private void ButtonNumero_Click(object sender, RoutedEventArgs e)
+        {
+            FinalizarUc(sender);
+            InicializarUc(sender);
         }
     }
 }
