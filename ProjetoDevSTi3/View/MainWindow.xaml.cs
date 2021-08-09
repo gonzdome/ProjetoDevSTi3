@@ -106,7 +106,7 @@ namespace ProjetoDevSTi3.View
                     var pedidoComplemento = Convert.ToString(item.EnderecoEntrega.Complemento);
                     var pedidoReferencia = Convert.ToString(item.EnderecoEntrega.Referencia);
 
-                    if (item.ValorTotal.Length == 5)
+                    if (item.ValorTotal.Length >= 5)
                     {
                         var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal)/10;
 
@@ -117,7 +117,7 @@ namespace ProjetoDevSTi3.View
                             pedidoValorTotal
                             ));
                     }
-                    if(item.ValorTotal.Length == 3 || item.ValorTotal.Length == 4)
+                    if (item.ValorTotal.Length <= 4)
                     {
                         var pedidoValorTotal = Convert.ToDecimal(item.ValorTotal);
                         ItemsControlPedido.Items.Add(Tuple.Create(pedidoNum,
